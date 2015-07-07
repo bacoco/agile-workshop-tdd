@@ -22,19 +22,29 @@ public class CalculadoraDeSalarioTest {
 	
 	@Test
 	public void gerenteDeProjetosComSalarioMaiorQue5000(){
-		Funcionario gp = umFuncionario(GERENTE_DE_PROJETOS, 5001);
+		Funcionario gerenteDeProjetos = umFuncionario(GERENTE_DE_PROJETOS, 5001);
 		
-		double salario = calculadora.calcula(gp);
+		double salario = calculadora.calcula(gerenteDeProjetos);
 		
 		assertEquals(5001 * 0.80, salario, 0.0000001);
 		
 	}
 	
 	@Test
-	public void gerenteDePrjetosComSalarioMenorQue5000(){
-		Funcionario gp = umFuncionario(GERENTE_DE_PROJETOS, 4500);
+	public void gerenteDeProjetosComSalarioDe5000(){
+		Funcionario gerenteDeProjetos = umFuncionario(GERENTE_DE_PROJETOS, 5000);
 		
-		double salario = calculadora.calcula(gp);
+		double salario = calculadora.calcula(gerenteDeProjetos);
+		
+		assertEquals(5000 * 0.80, salario, 0.0000001);
+		
+	}
+	
+	@Test
+	public void gerenteDePrjetosComSalarioMenorQue5000(){
+		Funcionario gerenteDeProjetos = umFuncionario(GERENTE_DE_PROJETOS, 4500);
+		
+		double salario = calculadora.calcula(gerenteDeProjetos);
 		
 		assertEquals(4500 * 0.85, salario, 0.0000001);
 	}

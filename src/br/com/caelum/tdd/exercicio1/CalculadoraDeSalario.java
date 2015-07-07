@@ -4,7 +4,6 @@ import static br.com.caelum.tdd.exercicio1.Cargo.*;
 
 public class CalculadoraDeSalario {
 
-
 	public double calcula(Funcionario funcionario) {
 		if(DESENVOLVEDOR.equals(funcionario.getCargo())) {
 			return dezOuVintePorcento(funcionario);
