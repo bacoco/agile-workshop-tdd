@@ -1,8 +1,6 @@
 package br.com.caelum.tdd.exercicio1;
 
-import static br.com.caelum.tdd.exercicio1.Cargo.DBA;
-import static br.com.caelum.tdd.exercicio1.Cargo.DESENVOLVEDOR;
-import static br.com.caelum.tdd.exercicio1.Cargo.TESTER;
+import static br.com.caelum.tdd.exercicio1.Cargo.*;
 
 import static org.junit.Assert.assertEquals;
 
@@ -20,6 +18,25 @@ public class CalculadoraDeSalarioTest {
 	@Before
 	public void setUp() {
 		calculadora = new CalculadoraDeSalario();
+	}
+	
+	@Test
+	public void gerenteDeProjetosComSalarioMaiorQue5000(){
+		Funcionario gp = umFuncionario(GERENTE_DE_PROJETOS, 5001);
+		
+		double salario = calculadora.calcula(gp);
+		
+		assertEquals(5001 * 0.80, salario, 0.0000001);
+		
+	}
+	
+	@Test
+	public void gerenteDePrjetosComSalarioMenorQue5000(){
+		Funcionario gp = umFuncionario(GERENTE_DE_PROJETOS, 4500);
+		
+		double salario = calculadora.calcula(gp);
+		
+		assertEquals(4500 * 0.85, salario, 0.0000001);
 	}
 	
 	@Test
