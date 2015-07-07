@@ -15,13 +15,13 @@ public class CalculadoraDeSalario {
 		}
 		
 		if(GERENTE_DE_PROJETOS.equals(funcionario.getCargo())){
-			return vinteOuQuinzePorcento(funcionario);
+			return quinzeOuVintePorcento(funcionario);
 		}
 		
 		throw new RuntimeException("funcionario invalido");
 	}
 	
-	private double vinteOuQuinzePorcento(Funcionario funcionario){
+	private double quinzeOuVintePorcento(Funcionario funcionario){
 		if(funcionario.getSalarioBase() >= 5000){
 			return funcionario.getSalarioBase() * 0.80;
 		}else{
