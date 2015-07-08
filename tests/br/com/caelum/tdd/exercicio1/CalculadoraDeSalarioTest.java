@@ -10,7 +10,7 @@ import org.junit.Test;
 import br.com.caelum.tdd.exercicio1.Funcionario;
 import br.com.caelum.tdd.exercicio1.Cargo;
 import br.com.caelum.tdd.exercicio1.CalculadoraDeSalario;
-
+@Deprecated
 public class CalculadoraDeSalarioTest {
 
 	private CalculadoraDeSalario calculadora;
