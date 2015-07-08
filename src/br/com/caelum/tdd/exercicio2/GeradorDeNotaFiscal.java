@@ -1,15 +1,13 @@
 package br.com.caelum.tdd.exercicio2;
 
+import java.util.List;
+
 public class GeradorDeNotaFiscal {
 
-	private final EnviadorDeEmail email;
-	private final NotaFiscalDao dao;
-	private final Sap sap;
-
-	public GeradorDeNotaFiscal(EnviadorDeEmail email, NotaFiscalDao dao, Sap sap) {
-		this.email = email;
-		this.dao = dao;
-		this.sap = sap;
+	private List<Acao> acoes;
+	
+	public GeradorDeNotaFiscal(List<Acao> acoes){
+		this.acoes = acoes;
 	}
 	
 	public NotaFiscal gera(Fatura fatura) {
@@ -18,9 +16,7 @@ public class GeradorDeNotaFiscal {
 		
 		NotaFiscal nf = new NotaFiscal(valor, impostoSimplesSobreO(valor));
 		
-		email.enviaEmail(nf);
-		dao.persiste(nf);
-		sap.envia(nf);
+		acoes.forEach(x -> x.executa(nf));
 
 		return nf;
 	}
