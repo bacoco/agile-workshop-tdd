@@ -4,7 +4,7 @@ import static br.com.caelum.tdd.exercicio1.Cargo.DBA;
 import static br.com.caelum.tdd.exercicio1.Cargo.DESENVOLVEDOR;
 import static br.com.caelum.tdd.exercicio1.Cargo.GERENTE_DE_PROJETOS;
 import static br.com.caelum.tdd.exercicio1.Cargo.TESTER;
-
+@Deprecated
 public class CalculadoraDeSalario {
 
 	public double calcula(Funcionario funcionario) {
