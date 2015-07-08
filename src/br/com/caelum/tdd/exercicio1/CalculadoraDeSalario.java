@@ -1,6 +1,9 @@
 package br.com.caelum.tdd.exercicio1;
 
-import static br.com.caelum.tdd.exercicio1.Cargo.*;
+import static br.com.caelum.tdd.exercicio1.Cargo.DBA;
+import static br.com.caelum.tdd.exercicio1.Cargo.DESENVOLVEDOR;
+import static br.com.caelum.tdd.exercicio1.Cargo.GERENTE_DE_PROJETOS;
+import static br.com.caelum.tdd.exercicio1.Cargo.TESTER;
 
 public class CalculadoraDeSalario {
 

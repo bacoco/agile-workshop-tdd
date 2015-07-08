@@ -24,6 +24,11 @@ public class Funcionario {
 	public double getSalarioBase() {
 		return salarioBase;
 	}
+	
+	public double getSalarioCalculado(){
+		return this.getCargo().getRegra().calcula(this);
+	}
+	
 	public void setId(int id) {
 		this.id = id;
 	}
