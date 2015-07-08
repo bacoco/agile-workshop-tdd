@@ -1,7 +1,6 @@
 package br.com.caelum.tdd.exercicio2;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
